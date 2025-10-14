@@ -14,7 +14,12 @@
         <!-- Screen Div -->
         <div class="flex items-center justify-center gap-5 bg-[#23222A] py-4 px-7 lg:px-6">
             <input type="text" name="" id="screen" class="py-1 w-full bg-[#23222A] milkish focus:outline-none text-xl font-semibold" readonly>
-            <img src="images/icon-copy.svg" alt="copy icon" class="hover:cursor-pointer translate-x-1 duration-200 ease-in ">
+            <img src="images/icon-copy.svg" alt="copy icon" class="copy-icon hover:cursor-pointer translate-x-1 duration-300 ease-in-out ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  class="copied-icon stroke-[#A3FFAE] w-8 hidden duration-300 ease-in-out stroke-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+
+
         </div>
 
         <!-- Input Div -->
@@ -26,30 +31,30 @@
             </div>
 
             <!-- Slider -->
-            <input type="range" name="" id="slider" class="w-full my-6" min="1" max="25" value="6">
+            <input type="range" name="" id="slider" class="w-full my-6" min="6" max="25" value="12">
 
             <!-- Checkboxes Div -->
             <div class="flex flex-col gap-5 milkish">
                 <!-- UpperCase -->
-                <div class="flex gap-5">
+                <div class="tick-parent flex gap-5 hover:cursor-pointer">
                     <div class="bg-[#A3FFAE] w-5 h-5 flex items-center justify-center"><img src="images/icon-check.svg" alt="" id="uppercase-tick" class="ticks"></div>
                     <p>Include Uppercase Letters</p>
                 </div>
 
                 <!-- LowerCase -->
-                <div class="flex gap-5">
+                <div class="tick-parent flex gap-5 hover:cursor-pointer">
                     <div class="bg-[#A3FFAE] w-5 h-5 flex items-center justify-center"><img src="images/icon-check.svg" alt="" id="lowercase-tick" class="ticks"></div>
                     <p>Include Lowercase Letters</p>
                 </div>
 
                 <!-- Number -->
-                <div class="flex gap-5">
+                <div class="tick-parent flex gap-5 hover:cursor-pointer">
                     <div class="bg-[#A3FFAE] w-5 h-5 flex items-center justify-center"><img src="images/icon-check.svg" alt="" id="number-tick" class="ticks"></div>
                     <p>Include Number</p>
                 </div>
 
                 <!-- Symbols -->
-                <div class="flex gap-5">
+                <div class="tick-parent flex gap-5 hover:cursor-pointer">
                     <div class="bg-[#A3FFAE] w-5 h-5 flex items-center justify-center"><img src="images/icon-check.svg" alt="" id="symbol-tick" class="ticks"></div>
                     <p>Include Symbols</p>
                 </div>
@@ -61,20 +66,21 @@
                 <div class="flex gap-3 items-center">
                     <p id="strength-text" class="milkish">TOO WEAK!</p>
                     <div class="flex items-center gap-2 p-4">
-                        <div class="strength-bar w-[10px] h-7 bg-red-500 "></div>
-                        <div class="strength-bar w-[10px] h-7 border-2 border-white"></div>
-                        <div class="strength-bar w-[10px] h-7 border-2 border-white"></div>
-                        <div class="strength-bar w-[10px] h-7 border-2 border-white"></div>
+                        <div class="strength-bar w-[10px] h-7 "></div>
+                        <div class="strength-bar w-[10px] h-7"></div>
+                        <div class="strength-bar w-[10px] h-7"></div>
+                        <div class="strength-bar w-[10px] h-7"></div>
                     </div>
                 </div>
             </div>
 
             <!-- Generate Button -->
-            <button class="generate-btn flex justify-center gap-3 w-full border border-[#A3FFAE] py-4 text-[#A3FFAE] text-center hover:-translate-y-1 ease-out duration-300">
-                <p>Generate</p>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} class="w-6 stroke-[#A3FFAE]">
+            <button class="generate-btn flex flex-row-reverse justify-center gap-3 w-full border border-[#A3FFAE] py-4 text-[#A3FFAE] text-center hover:-translate-y-1 ease-out duration-200 hover:text-black hover:bg-[#A3FFAE] group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} class="w-6 stroke-[#A3FFAE] group-hover:stroke-black">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
+                <p>Generate</p>
+                
 
             </button>
         </div>

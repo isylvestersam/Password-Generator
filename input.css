@@ -6,7 +6,19 @@
     .milkish {
         @apply text-[#E3EEEF]
     }
-    .emtpyBar {
-        
+    .empty {
+        @apply border-2 border-white
+    }
+    .too-weak {
+        @apply bg-red-500
+    }
+    .weak {
+        @apply bg-orange-500
+    }
+    .medium {
+        @apply bg-yellow-500
+    }
+    .strong {
+        @apply bg-[#A3FFAE] 
     }
 }
