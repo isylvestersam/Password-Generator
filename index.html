@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />
+    <link rel="stylesheet" href="output.css">
+    <title>Password Generator</title>
+</head>
+<body class="font-jetBrains pt-20 bg-[#14131B] min-h-screen flex flex-col">
+    <div class="container mx-auto flex flex-col px-5 lg:w-[35%] lg:my-auto ">
+        <h3 class="text-center mb-6 text-2xl text-[#807C92] font-semibold">Password Generator</h3>
+
+        <!-- Screen Div -->
+        <div class="flex items-center justify-center gap-5 bg-[#23222A] py-4 px-7 lg:px-6">
+            <input type="text" name="" id="screen" class="py-1 w-full bg-[#23222A] milkish focus:outline-none text-xl font-semibold" readonly>
+            <img src="images/icon-copy.svg" alt="copy icon" class="hover:cursor-pointer translate-x-1 duration-200 ease-in ">
+        </div>
+
+        <!-- Input Div -->
+        <div class="bg-[#23222A] px-4 mt-5 py-8 lg:px-6">
+            <!-- Char Length Text  -->
+            <div class="flex justify-between milkish">
+                <p>Character Length</p>
+                <p id="length-text" class="text-2xl text-[#A3FFAE] font-semibold">6</p>
+            </div>
+
+            <!-- Slider -->
+            <input type="range" name="" id="slider" class="w-full my-6" min="1" max="25" value="6">
+
+            <!-- Checkboxes Div -->
+            <div class="flex flex-col gap-5 milkish">
+                <!-- UpperCase -->
+                <div class="flex gap-5">
+                    <div class="bg-[#A3FFAE] w-5 h-5 flex items-center justify-center"><img src="images/icon-check.svg" alt="" id="uppercase-tick" class="ticks"></div>
+                    <p>Include Uppercase Letters</p>
+                </div>
+
+                <!-- LowerCase -->
+                <div class="flex gap-5">
+                    <div class="bg-[#A3FFAE] w-5 h-5 flex items-center justify-center"><img src="images/icon-check.svg" alt="" id="lowercase-tick" class="ticks"></div>
+                    <p>Include Lowercase Letters</p>
+                </div>
+
+                <!-- Number -->
+                <div class="flex gap-5">
+                    <div class="bg-[#A3FFAE] w-5 h-5 flex items-center justify-center"><img src="images/icon-check.svg" alt="" id="number-tick" class="ticks"></div>
+                    <p>Include Number</p>
+                </div>
+
+                <!-- Symbols -->
+                <div class="flex gap-5">
+                    <div class="bg-[#A3FFAE] w-5 h-5 flex items-center justify-center"><img src="images/icon-check.svg" alt="" id="symbol-tick" class="ticks"></div>
+                    <p>Include Symbols</p>
+                </div>
+            </div>
+
+            <!-- Strength Div -->
+            <div class="flex justify-between items-center bg-[#191820] px-4 my-9">
+                <p class="text-[#807C92]">STRENGTH</p>
+                <div class="flex gap-3 items-center">
+                    <p id="strength-text" class="milkish">TOO WEAK!</p>
+                    <div class="flex items-center gap-2 p-4">
+                        <div class="strength-bar w-[10px] h-7 bg-red-500 "></div>
+                        <div class="strength-bar w-[10px] h-7 border-2 border-white"></div>
+                        <div class="strength-bar w-[10px] h-7 border-2 border-white"></div>
+                        <div class="strength-bar w-[10px] h-7 border-2 border-white"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generate Button -->
+            <button class="generate-btn flex justify-center gap-3 w-full border border-[#A3FFAE] py-4 text-[#A3FFAE] text-center hover:-translate-y-1 ease-out duration-300">
+                <p>Generate</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} class="w-6 stroke-[#A3FFAE]">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
