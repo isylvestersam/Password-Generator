@@ -619,6 +619,102 @@ video {
   background-color: rgb(163 255 174 / var(--tw-bg-opacity, 1));
 }
 
+/* Slider Styling */
+
+#slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 0px;
+  background: #191820;
+}
+
+/* WebKit Thumb */
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.75rem;
+  width: 1.75rem;
+  cursor: pointer;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  -webkit-transition-property: all;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+#slider::-webkit-slider-thumb:hover {
+  cursor: grab;
+}
+
+#slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+
+#slider::-webkit-slider-thumb {
+  z-index: 10;
+  position: relative;
+  top: -120%;
+}
+
+/* WebKit Track */
+
+#slider::-webkit-slider-runnable-track {
+  height: 0.5rem;
+  border-radius: 9999px;
+}
+
+/* Firefox Thumb */
+
+#slider::-moz-range-thumb {
+  height: 1.75rem;
+  width: 1.75rem;
+  cursor: pointer;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+/* Firefox Track */
+
+#slider::-moz-range-track {
+  height: 0.5rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 24 32 / var(--tw-bg-opacity, 1));
+}
+
+/* Firefox Filled Left Side */
+
+#slider::-moz-range-progress {
+  height: 0.5rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -650,6 +746,10 @@ video {
   display: none;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -660,6 +760,10 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-0 {
+  width: 0px;
 }
 
 .w-5 {
@@ -680,6 +784,11 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .translate-x-1 {
@@ -882,16 +991,8 @@ video {
   outline-offset: 2px;
 }
 
-.group:hover .group-hover\:stroke-white {
-  stroke: #fff;
-}
-
 .group:hover .group-hover\:stroke-black {
   stroke: #000;
-}
-
-.peer:hover ~ .peer-hover\:stroke-white {
-  stroke: #fff;
 }
 
 @media (min-width: 1024px) {

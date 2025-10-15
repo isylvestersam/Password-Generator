@@ -12,6 +12,7 @@ const tickParent = document.querySelectorAll('.tick-parent');
 const generateBtn = document.querySelector('.generate-btn');
 const copyIcon = document.querySelector('.copy-icon');
 const copiedIcon = document.querySelector('.copied-icon');
+const fill = document.getElementById('slider-fill');
 
 const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowercase = 'abcdefghijklmnopqrstuvwxyz';
@@ -137,3 +138,18 @@ function strengthBarLoop(index, classname) {
         }
     }
 }
+
+const updateFill = () => {
+  const value = slider.value;
+  const min = slider.min ? slider.min : 0;
+  const max = slider.max ? slider.max : 95;
+  const percent = ((value - min) / (max - min)) * 99;
+  fill.style.width = `${percent}%`;
+}
+
+// Initial fill
+updateFill();
+
+// Update on input
+slider.addEventListener('input', updateFill);
+
